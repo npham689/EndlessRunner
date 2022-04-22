@@ -23,12 +23,12 @@ class Menu extends Phaser.Scene {
             fixedWidth: 0
         }
         // show menu text
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'WELCOME TO THE WILD WILD WEST', menuConfig).setOrigin(0.5);
-        this.add.text(game.config.width/2, game.config.height/2, 'P1 rides with ←→ arrows & (F) to fire', menuConfig).setOrigin(0.5);
-        this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'P2 drags the mouse', menuConfig).setOrigin(0.5);
+        //this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'WELCOME TO THE WILD WILD WEST', menuConfig).setOrigin(0.5);
+        //this.add.text(game.config.width/2, game.config.height/2, 'P1 rides with ←→ arrows & (F) to fire', menuConfig).setOrigin(0.5);
+        //this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'P2 drags the mouse', menuConfig).setOrigin(0.5);
         menuConfig.backgroundColor = '#00FF00';
         menuConfig.color = '#000';
-        this.add.text(game.config.width/2, game.config.height/2 + borderUISize *2 + borderUISize*2 , 'Press ← for Farmhand or → for Cowboy', menuConfig).setOrigin(0.5);
+        //this.add.text(game.config.width/2, game.config.height/2 + borderUISize *2 + borderUISize*2 , 'Press ← for Farmhand or → for Cowboy', menuConfig).setOrigin(0.5);
   
         // define keys
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
