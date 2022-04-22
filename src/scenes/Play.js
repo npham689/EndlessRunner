@@ -67,7 +67,8 @@ class Play extends Phaser.Scene{
     // the player jumps when on the ground, or once in the air as long as there are jumps left and the first jump was on the ground
     jump(){
         //below line is giving errors
-        if(this.player.body.touching.down || (this.playerJumps > 0 &amp;&amp; this.playerJumps < gameOptions.jumps)){
+        //if(this.player.body.touching.down || (this.playerJumps > 0 &amp;&amp; this.playerJumps < gameOptions.jumps)){
+        if(this.player.body.touching.down || (this.playerJumps > 0 &amp&amp && this.playerJumps < gameOptions.jumps)){
             if(this.player.body.touching.down){
                 this.playerJumps = 0;
             }
