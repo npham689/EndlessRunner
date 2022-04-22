@@ -1,11 +1,11 @@
 // playGame scene
-class playGame extends Phaser.Scene{
+class Play extends Phaser.Scene{
     constructor(){
         super("PlayGame");
     }
     preload(){
         this.load.image("platform", "platform.png");
-        this.load.image("player", "player.png");
+        this.load.image("player", "player1.png");
     }
     create(){
  
@@ -66,6 +66,7 @@ class playGame extends Phaser.Scene{
  
     // the player jumps when on the ground, or once in the air as long as there are jumps left and the first jump was on the ground
     jump(){
+        //below line is giving errors
         if(this.player.body.touching.down || (this.playerJumps > 0 &amp;&amp; this.playerJumps < gameOptions.jumps)){
             if(this.player.body.touching.down){
                 this.playerJumps = 0;
@@ -100,18 +101,3 @@ class playGame extends Phaser.Scene{
         }
     }
 };
-function resize(){
-    let canvas = document.querySelector("canvas");
-    let windowWidth = window.innerWidth;
-    let windowHeight = window.innerHeight;
-    let windowRatio = windowWidth / windowHeight;
-    let gameRatio = game.config.width / game.config.height;
-    if(windowRatio < gameRatio){
-        canvas.style.width = windowWidth + "px";
-        canvas.style.height = (windowWidth / gameRatio) + "px";
-    }
-    else{
-        canvas.style.width = (windowHeight * gameRatio) + "px";
-        canvas.style.height = windowHeight + "px";
-    }
-}
