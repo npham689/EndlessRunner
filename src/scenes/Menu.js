@@ -23,8 +23,8 @@ class Menu extends Phaser.Scene {
             fixedWidth: 0
         }
         // show menu text
-        this.add.image(250, 150, 'background');
-        this.add.text(410, 300, 'WELCOME TO THE LOUD QUIET', menuConfig).setOrigin(0.5);
+        this.add.image(450, 150, 'background');
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'WELCOME TO THE LOUD QUIET', menuConfig).setOrigin(0.5);
         //this.add.text(game.config.width/2, game.config.height/2, 'P1 rides with ←→ arrows & (F) to fire', menuConfig).setOrigin(0.5);
         //this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'P2 drags the mouse', menuConfig).setOrigin(0.5);
         //menuConfig.backgroundColor = '#00FF00';

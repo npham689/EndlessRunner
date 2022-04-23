@@ -1,4 +1,3 @@
-
 // global game options
 let gameOptions = {
     platformStartSpeed: 350,
@@ -10,11 +9,10 @@ let gameOptions = {
     jumps: 2
 }
 
-window.onload = function() {
     let config = {
-        type: Phaser.AUTO,
-        width: 1334,
-        height: 750,
+        type: Phaser.CANVAS,
+        width: 640,
+        height: 480,
         scene: [ Menu, Play ],
         backgroundColor: 0x4FFFFE0,
         physics: {
@@ -26,30 +24,8 @@ window.onload = function() {
         },
     }
     let game = new Phaser.Game(config);
-
-    //test
-    window.focus();
-    resize();
-    window.addEventListener("resize", resize, false);
-}
+    let borderUISize = game.config.height / 15;
+    let borderPadding = borderUISize / 3;
 
 // reserve keyboard variables
 let keyUP, keyDOWN, keyLEFT, keyRIGHT;
-
-function resize(){
-    let canvas = document.querySelector("canvas");
-    let windowWidth = window.innerWidth;
-    let windowHeight = window.innerHeight;
-    let windowRatio = windowWidth / windowHeight;
-    let gameRatio = game.config.width / game.config.height;
-    if(windowRatio < gameRatio){
-        canvas.style.width = windowWidth + "px";
-        canvas.style.height = (windowWidth / gameRatio) + "px";
-    }
-    else{
-        canvas.style.width = (windowHeight * gameRatio) + "px";
-        canvas.style.height = windowHeight + "px";
-    }
-}
-
- 
