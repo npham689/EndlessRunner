@@ -1,6 +1,6 @@
 // global game options
 let gameOptions = {
-    platformStartSpeed: 350,
+    platformStartSpeed: 50,
     spawnRange: [100, 350],
     platformSizeRange: [50, 250],
     playerGravity: 900,
@@ -18,7 +18,7 @@ let gameOptions = {
         physics: {
             default: 'arcade',
             arcade: {
-                gravity: { y: 200},
+                gravity: { y: 0},
                 debug: true
             }
         },

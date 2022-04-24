@@ -39,11 +39,11 @@ class Menu extends Phaser.Scene {
     update() {
         if (Phaser.Input.Keyboard.JustDown(keyLEFT)) {
           // Novice mode
-          this.scene.start("playScene");    
+          this.scene.start("PlayGame");
         }
         if (Phaser.Input.Keyboard.JustDown(keyRIGHT)) {
           // Expert mode
-          this.scene.start("playScene");    
+          this.scene.start("PlayGame");    
         }
       }
 }

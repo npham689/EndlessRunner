@@ -57,7 +57,7 @@ class Play extends Phaser.Scene{
         else{
             platform = this.physics.add.sprite(posX, game.config.height * 0.8, "platform");
             platform.setImmovable(true);
-            platform.setVelocityX(gameOptions.platformStartSpeed * -1);
+            platform.setVelocityY(gameOptions.platformStartSpeed);
             this.platformGroup.add(platform);
         }
         platform.displayWidth = platformWidth;
